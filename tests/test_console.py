@@ -50,9 +50,10 @@ class TestHBNBCommand_help_messages(unittest.TestCase):
     """Unittests for HBNB command interpreter help messages."""
 
     def test_help(self):
-        expected_output = ("Documented commands (type help <topic>):\n"
-                           "========================================\n"
-                           "EOF  all  count  create  destroy  help  quit  show  update")
+        expected_output = (
+            "Documented commands (type help <topic>):\n"
+            "========================================\n"
+            "EOF  all  count  create  destroy  help  quit  show  update")
         with patch("sys.stdout", new=StringIO()) as f:
             self.assertFalse(HBNBCommand().onecmd("help"))
             self.assertEqual(expected_output, f.getvalue().strip())
@@ -70,21 +71,24 @@ class TestHBNBCommand_help_messages(unittest.TestCase):
             self.assertEqual(expected_output, f.getvalue().strip())
 
     def test_help_create(self):
-        expected_output = ("""Creates a new instance of BaseModel, saves it and prints the ID.
+        expected_output = (
+          """Creates a new instance of BaseModel, saves it and prints the ID.
         Usage: create <class name>""")
         with patch("sys.stdout", new=StringIO()) as f:
             self.assertFalse(HBNBCommand().onecmd("help create"))
             self.assertEqual(expected_output, f.getvalue().strip())
 
     def test_help_show(self):
-        expected_output = ("""Prints string representation of an instance based on class name
+        expected_output = (
+            """Prints string representation of an instance based on class name
         and ID. Usage: show <class name> <id> or <class name>.show(<id>)""")
         with patch("sys.stdout", new=StringIO()) as f:
             self.assertFalse(HBNBCommand().onecmd("help show"))
             self.assertEqual(expected_output, f.getvalue().strip())
 
     def test_help_all(self):
-        expected_output = ("""Retrieves all instances of a class. Usage: all or all <class name>
+        expected_output = (
+         """Retrieves all instances of a class. Usage: all or all <class name>
         or <class name>.all().""")
         with patch("sys.stdout", new=StringIO()) as f:
             self.assertFalse(HBNBCommand().onecmd("help all"))
@@ -92,14 +96,16 @@ class TestHBNBCommand_help_messages(unittest.TestCase):
             self.assertIn(expected_output, actual_output)
 
     def test_help_destroy(self):
-        expected_output = ("""Deletes an instance based on the class name and id.
+        expected_output = (
+          """Deletes an instance based on the class name and id.
         Usage: destroy <class name> <id> or <class name>.destroy(<id>)""")
         with patch("sys.stdout", new=StringIO()) as f:
             self.assertFalse(HBNBCommand().onecmd("help destroy"))
             self.assertEqual(expected_output, f.getvalue().strip())
 
     def test_help_update(self):
-        expected_output = ("""Updates an instance based on the class name and ID by adding or
+        expected_output = (
+            """Updates an instance based on the class name and ID by adding or
         updating attributes. Usage: update <class> <id> <attribute_name>
         <attribute_value> or <class>.update(<id>, <attribute_name>,
         <attribute_value>) or <class>.update(<id>, <dictionary>)""")
@@ -128,7 +134,8 @@ class TestHBNBCommand_exit_cmd(unittest.TestCase):
 
 
 class TestHBNBCommand_create_cmd(unittest.TestCase):
-    """Unittests to evaluate create command from the HBNB command interpreter."""
+    """Unittests to evaluate create command from the HBNB command
+    interpreter."""
 
     @classmethod
     def setUp(self):
@@ -462,7 +469,8 @@ class TestHBNBCommand_show_cmd(unittest.TestCase):
 
 
 class TestHBNBCommand_destroy_cmd(unittest.TestCase):
-    """Unittests to evaluate destroy command of the HBNB command interpreter."""
+    """Unittests to evaluate destroy command of the HBNB command
+    interpreter."""
 
     @classmethod
     def setUp(self):
@@ -836,7 +844,8 @@ class TestHBNBCommand_all_cmd(unittest.TestCase):
 
 
 class TestHBNBCommand_update_cmd(unittest.TestCase):
-    """Unittests to evaluate update command of the HBNB command interpreter."""
+    """Unittests to evaluate update command of the HBNB command
+    interpreter."""
 
     @classmethod
     def setUp(self):
@@ -1218,4 +1227,3 @@ class TestHBNBCommand_count_cmd(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
-
