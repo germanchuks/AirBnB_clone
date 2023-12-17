@@ -1,0 +1,237 @@
+.places {
+    padding: 25px 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.places > h1 {
+    font-size: 30px;
+    text-align: left;
+    width: 100%;
+    margin: 5px;
+}
+
+.places > article {
+    width: 440px;
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #FF5A5F;
+    border-radius: 4px;
+    display: inline;
+    position: relative;
+}
+
+.places > article > h2 {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.price_by_night {
+    display: flex;
+    color: #FF5A5F;
+    border: 4px solid #FF5A5F;
+    border-radius: 100%;
+    width: 70px;
+    min-width: 60px;
+    height: 70px;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 25px;
+    align-items: right;
+    padding: 0 25px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.information {
+    margin-top: 45px;
+    margin-bottom: 20px;
+    border-top: 1px solid #DDDDDD;
+    border-bottom: 1px solid #DDDDDD;
+    display: flex;
+    justify-content: space-around;
+    height: 80px;
+    padding: 7px 18px;
+}
+
+.max_guest {
+    background: url('../images/icon_group.png') no-repeat;
+    background-size: 45px;
+    background-position: top center;
+    width: 100px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.number_rooms {
+    background: url('../images/icon_bed.png') no-repeat;
+    background-size: 45px;
+    background-position: top center;
+    width: 100px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.number_bathrooms {
+    background: url('../images/icon_bath.png') no-repeat;
+    background-size: 45px;
+    background-position: top center;
+    width: 100px;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+}
+
+.user {
+    margin: 10px 0;
+    width: 100%;
+    font-size: 15px;
+}
+
+.description {
+    padding: 0;
+    width: 100%;
+    font-size: 15px;
+}
+
+/* ARTICLE AMENITIES */
+.places > article > .amenities {
+    margin-top: 40px;
+}
+
+.places > article > .amenities > h2 {
+    font-size: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DDDDDD;
+
+}
+
+.places > article > .amenities > ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.places > article > .amenities > ul > li {
+    padding-block: 5px;
+    width: 100%;
+    font-size: 14px;
+    text-indent: 40px;
+}
+
+.tv_amnty {
+    background: url('../images/icon_tv.png') no-repeat;
+    background-position: left center;
+    background-size: 22px;
+}
+
+.wifi_amnty {
+    background: url('../images/icon_wifi.png') no-repeat;
+    background-position: left center;
+    background-size: 22px;
+}
+
+.pets_amnty {
+    background: url('../images/icon_pets.png') no-repeat;
+    background-position: left center;
+    background-size: 22px;
+}
+
+
+/*ARTICLE REVIEWS*/
+.places > article > .reviews {
+    margin-top: 40px;
+}
+
+.places > article > .reviews > h2 {
+    font-size: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #DDDDDD;
+
+}
+
+.places > article > .reviews > ul {
+    list-style-type: none;
+    padding: 0;
+    margin-block: 10px;
+}
+
+.places > article > .reviews > ul > li {
+    margin-block: 15px;
+}
+
+.places > article > .reviews > ul > li > h3 {
+    font-size: 14px;
+    padding: 0;
+    margin: 0;
+}
+
+.places > article > .reviews > ul > li > p {
+    font-size: 13px;
+    padding: 0;
+    margin: 0
+}
+
+/*MEDIA QUERY*/
+@media screen and (max-width: 800px) {
+    
+    .places {
+        padding: 25px 0;
+    }
+
+    .places > h1 {
+        font-size: 25px;
+        margin: 2px;
+    }
+
+    .places > article {
+        width: 350px;
+        padding: 15px;
+        font-size: 90%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    
+    .places {
+        padding: 10px 0;
+    }
+
+    .places > article {
+        width: 350px;
+        padding: 15px;
+        font-size: 90%;
+    }
+
+    .places > article > h2 {
+        font-size: 22.5px;
+    }
+
+    .price_by_night {
+        border: 2px solid #FF5A5F;
+        width: 45px;
+        min-width: 40px;
+        height: 50px;
+        font-size: 15px;
+    }
+}
+
+/* MEDIA QUERY */
+@media screen and (min-width: 750px) {
+
+    .places > article {
+        width: 370px;
+        padding: 10px;
+        font-size: 90%;
+    }
+}
